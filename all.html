@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mildred Ewenrim Ebomah | Resume</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    /* CSS styling without frameworks like Bootstraps */
+    /* Box styling to create a box xpace for the Header */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Creative choice of colour, font and layout */
+    /* line-height for text spacing */
+    /* horizontal and verticcal padding to accomodate all kinds of screens */
+    body {
+        font-family: 'Poppins', 'Merriweather', 'Roboto', 'Segoe UI' 'sans-serif';
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 0 1rem;
+    }
+
+    /* justified text aligned to the centre */
+    /* horizontal padding 2rem, vertical padding 1rem */
+    header {
+        background-color: #1e3a8a;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    /* Navigation styling */
+    nav {
+        margin-top: 1rem;
+    }
+
+    /* List-style and horizontal display */
+    /* justified text to the centre and 1rem spaceing between each item */
+    .nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: #3b82f6;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .nav li a:hover {
+        background: #2563eb;
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        border-bottom: 2px solid #1e3a8a;
+        color: #1e3a8a;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* This download box allows the user download CV in PDF version */
+    /* Margin and padding centers horizontally and adds vertical space with background color, border color and box shadowing */
+    .download-box {
+        max-width: 400px;
+        margin: 4rem auto;
+        padding: 2rem;
+        background-color: #e6f0e6;
+        border: 2px solid #1e3a8a;
+        border-radius: 12px;
+        box-shadow: 0 0 12px 2px #1e3a8a;
+        text-align: center;
+    }
+
+    /* Attaching a download box for better view and display */
+    .download-box .button-link {
+        display: inline-block;
+        background-color: #1e3a8a;
+        color: #fff;
+        padding: 0.7rem 1.8rem;
+        margin: 0.8rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 0 8px #3282cd;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    /* Hover effect on the download box */
+    .download-box .button-link:hover {
+        background-color: #3282cd;
+        color: #1e3a8a;
+        box-shadow: 0 0 12px #3282cd;
+    }
+
+    /* Form styling */
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    form button {
+        background: #1e3a8a;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background: #3b82f6;
+    }
+
+    footer {
+        text-align: center;
+        background: #e5e7eb;
+        padding: 1rem;
+        color: #1e3a8a;
+    }
+
+    /* Responsive Styles */
+    /* Media Query to make the website responsive to any kind of device, phones, tablets or PCs */
+    /* Media Query responsiveness falls between 768px and 480px */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav.active {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        .nav li a {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Dark Mode Styles */
+    .dark.mode body {
+        background-color: #1e1e2f;
+        color: #f1f1f1;
+    }
+
+    .dark.mode header {
+        background-color: #0a0a23;
+        color: #f1f1f1;
+    }
+
+    .dark.mode main {
+        background-color: #2a2a40;
+    }
+
+    .dark.mode a {
+        color: #90cdf4;
+    }
+
+    .dark.mode footer {
+        background-color: #111;
+        color: #ccc;
+    }
+
+    /* Dark mode social styles */
+    body.dark #social a {
+        color: #9b9bc2;
+    }
+
+    body.dark #social a:hover {
+        color: #66ccff;
+    }
+
+    .dark.mode footer {
+        background-color: #747491;
+        color: #ccc;
+    }
+
+    #themeToggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        background-color: #1e3a8a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+
+    #themeToggle:hover {
+        transform: scale(1.1);
+    }
+
+    /* Connect with me displays my social handles when clicked */
+    #social {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    #social a {
+        color: rgb(37, 0, 172);
+        text-decoration: none;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+
+    #social a:hover {
+        color: rgb(0, 140, 255);
+    }
+</style>
+
+body>
+<!--Basic resume containing About, Interests, Skills, Experience, Education, Projects, Language and Contact info-->
+
+<body>
+    <header>
+        <button id="themeToggle" aria-label="Toggle theme">
+            <span id="themeIcon">🌙</span>
+        </button>
+        <div class="container">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <h1>Mildred Ewenrim Ebomah</h1>
+            <p>Medical Radiographer | Future Health Tech Innovator</p>
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul class="nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Certified Medical Radiographer with over 3+ years of experience dedicated to delivering excellence in
+                patient care. Seeking to use proven expertise in operating advanced radiographic equipment,
+                conducting
+                diagnostic imaging procedures, and prioritizing patient comfort. Committed to providing top-tier
+                care,
+                ensuring precise diagnoses, and fostering empathy and cultural awareness to create a supportive
+                environment for patients and staff.</p>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li> Biomedical Software Engineering</li>
+                <li> Radiology Equipments</li>
+                <li> Mammography</li>
+                <li> Computed Tomography</li>
+                <li> Forensic Science</li>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Python (Basic)</li>
+                        <li>Hard skills: MS Offi ce, Research, Writing, Graphic Design, Illustration, Video editing,
+                            programming
+                        </li>
+                        <li>Tools: MA Offi ce tools, Sketchbook pro, Canva, Capcut, VSCode, python</li>
+                        <li>Soft skills: Eff ective communication, Teamwork, Time management, Adaptability, Confl
+                            ict
+                            management
+                        </li>
+                        <li>Data Visualization</li>
+                        <li>Medical Imaging (Radiography): Diagnostic Medical imaging (X-ray), Ultrasonography,
+                            Mammography,Computed Tomography.</li>
+                    </ul>
+                </section>
+
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <h3>Senior Medical Radiographer
+                        Mater Misericordiae Hospital, Afikpo Ebonyi (May 2023-August 2024)</h3>
+                    <p> ● Contrast studies, Ultrasonography and Electrocardiography, adhering to established
+                        protocols.
+                    </p>
+                    <p> ● Collaborate eff ectively with multidisciplinary healthcare teams to ensure accurate
+                        diagnoses
+                        and
+                        optimal patient care.</p>
+                    <p>● Participate in continuous professional development activities to stay updated on
+                        emerging technologies and best practices in radiography.</p>
+                    <h3>Chief Intern Radiographer
+                        Alex Ekwueme Federal University Teaching Hospital, Ebonyi (Feb 2022- Jan 2023)</h3>
+                    <p>● Served as Chief Intern and coordinated the activities of radiography interns in the
+                        hospital.
+                    </p>
+                    <p>● Assisted in performing diagnostic imaging procedures under the supervision of licensed
+                        radiographers.
+                    </p>
+                    <p>● Assisted in sonographic procedures and reporting sonographic findings</p>
+                    <h3>Volunteer Radiographer - Alex Ekwueme Federal University Teaching Hospital, Ebonyi (Sept
+                        2021 -
+                        Feb
+                        2022)</h3>
+                    <p> ● Assisted in patient education, explaining procedures and ensuring their comfort and
+                        understanding.</p>
+                    <p> ● Collaborated with healthcare professionals to deliver comprehensive care to patients in
+                        need.
+                    </p>
+
+
+                </section>
+
+                <section id="education">
+                    <h2>Education</h2>
+                    <p><strong>African Leadership University (ALU), Kigali. Rwanda
+                        </strong> – Bachelor ( Software Engineering) B.SE (in view)</p>
+                    <p><strong>University of Nigeria Nsukka (UNN), Enugu State. Nigeria
+                        </strong> – Bachelor of Medical Radiography (B. MR) 2021</p>
+                    <h2>Thesis</h2>
+                    <p> ● Assessment of practice and methods of sterilization of hysterosalpingography equipment in
+                        selected radiology units in Enugu State.</p>
+                    <p> ● Importance of Mammography in the Characterization of Breast Lesions.</p>
+                </section>
+
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="project">
+                        <h3>2024 - Radiographic Health Pathologies</h3>
+                        <p>Analysing reproductive radiographic health pathologies in both men and women at African
+                            Leadership University, ALU.</p>
+                    </div>
+                    <div class="project">
+                        <h3>2024 - Be Aware, Be Informed, Be Empowered</h3>
+                        <p>Breast cancer awareness at African Leadership University, ALU.</p>
+                    </div>
+                    <div class="project">
+                        <h3>2024 - Ultrasonographic Assessment of the Scrotum</h3>
+                        <p>Assessment of the scrotum amongst young men of child bearing age.</p>
+                        <p><a href="https://www.notion.so/SEMINARS-1d76769e27ec80bea6d7c4115d22758e?pvs=4"
+                                target="_blank">View all health-related projects</a></p>
+                    </div>
+                    <div class="project">
+                        <h3>2025 - Regex Data Extractor</h3>
+                        <p>Python tool to extract structured data (emails, hashtags, URLs) from unstructured text.
+                        </p>
+                        <p><a href="https://github.com/MEE-DRED/alu_regex-data-extraction-MEE-DRED" target="_blank">View
+                                all Data projects on GitHub</a>
+                        </p>
+                    </div>
+
+                </section>
+
+                <section id="personal development and certification">
+                    <h2>Certification</h2>
+                    <h3>Interpretation of Medical Images(X-Rays, CTS, MRIS). ( April 2024)</h3>
+                    <p>Interpretation of images with possible diagnosis</p>
+                    <h3>Foreign Language Acquisition Certifi cation (Profi ciency Spanish Language Certifi cation)
+                        (March 2024)</h3>
+                    <p>Advanced Spanish language proficiency</p>
+                    <h3>The Nigerian Institute of Radiographers, Post graduate in Computed Tomography (September
+                        2022)
+                    </h3>
+                    <p>Post graduate studies in computed tomography</p>
+                    <p><a href="https://www.notion.so/MILDRED-LICENSE-AND-CERTIFICATES-9febc9029fbf40658e734dda31e8a958?pvs=4
+https://www.notion.so/MILDRED-LANGUAGES-4d503a3a3cde4a49adc0c92af45eb7bb?pvs=4
+https://www.notion.so/Mi-ilustre-Fashion-illustration-568cd9b3a61041a4ae380c9df7057aba?pvs=4" target="_blank">View
+                            all Certifications</a>
+
+                    <section id="language">
+                        <h2>Language</h2>
+                        <p>English (Native)</p>
+                        <p>Spanish (intermediate)</P>
+                        <p>Korean (intermediate)</p>
+                        <p>French (beginner)</p>
+
+                        <section id="download" class="download-box">
+                            <a href="downloads/Mildred_Ebomah_Resume.pdf" download class="button-link">Download
+                                Resume
+                                (PDF)</a>
+                            <a href="EBOMAH MILDRED EWENRIM__CV.main.pdf" download class="button-link">Download CV
+                                (PDF)</a>
+
+
+                        </section>
+
+
+                        <section id="contact">
+                            <h2>Contact Me</h2>
+                            <form id="contactForm">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" required />
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" required />
+
+                                <label for="message">Message:</label>
+                                <textarea id="message" rows="5" required></textarea>
+
+                                <button type="submit">Send</button>
+                            </form>
+                        </section>
+                    </section>
+                    <!--Connect with Me on social media-->
+                    <section id="social">
+                        <h2>Connect With Me</h2>
+                        <p>
+                            <a href="https://www.instagram.com/mildred_ebomah?igsh=cmgwNDlyejMzdTBx&utm_source=qr"
+                                target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            |
+                            <a href="www.linkedin.com/in/mildredebomah" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            |
+                            <a href="https://medium.com/@dynwithmee" target="_blank" aria-label="Medium">
+                                <i class="fab fa-medium"></i></a> |
+                            <a href="https://www.facebook.com/share/1XP12ZqjAj/?mibextid=wwXIfr" target="_blank"
+                                aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                        </p>
+                    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mildred Ewenrim Ebomah. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+<script>
+    // Toggle navigation for main-toggle to allow navigation when mediaQuery is applied
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    // Form validation for name, email and a message to me
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function (e) {
+        const name = form.querySelector('#name').value.trim();
+        const email = form.querySelector('#email').value.trim();
+        const message = form.querySelector('#message').value.trim();
+        const emailPattern = /^\S+@\S+\.\S+$/;
+
+        if (!name || !email || !message) {
+            alert('All fields are required.');
+            e.preventDefault();
+        } else if (!emailPattern.test(email)) {
+            alert('Please enter a valid email.');
+            e.preventDefault();
+
+            // For validation, all fields are required and form would not submit without all necessary details 
+            if (!name.value.trim()) {
+                alert('Please enter your name.');
+                name.focus();
+                e.preventDefault();
+                return;
+            }
+
+            if (!email.value.includes('@')) {
+                alert('Please enter a valid email address.');
+                email.focus();
+                e.preventDefault();
+                return;
+            }
+
+            if (!message.value.trim()) {
+                alert('Please enter your message.');
+                message.focus();
+                e.preventDefault();
+                return;
+            }
+
+            alert('Form submitted successfully!');
+
+        }
+
+    });
+</script>
+
+</html>
