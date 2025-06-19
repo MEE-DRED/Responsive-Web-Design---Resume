@@ -1,0 +1,261 @@
+    /* CSS styling without frameworks like Bootstraps */
+    /* Box styling to create a box xpace for the Header */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Creative choice of colour, font and layout */
+    /* line-height for text spacing */
+    /* horizontal and verticcal padding to accomodate all kinds of screens */
+    body {
+        font-family: 'Poppins', 'Merriweather', 'Roboto', 'Segoe UI' 'sans-serif';
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 0 1rem;
+    }
+
+    /* justified text aligned to the centre */
+    /* horizontal padding 2rem, vertical padding 1rem */
+    header {
+        background-color: #1e3a8a;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    /* Navigation styling */
+    nav {
+        margin-top: 1rem;
+    }
+
+    /* List-style and horizontal display */
+    /* justified text to the centre and 1rem spaceing between each item */
+    .nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: #3b82f6;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .nav li a:hover {
+        background: #2563eb;
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        border-bottom: 2px solid #1e3a8a;
+        color: #1e3a8a;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* This download box allows the user download CV in PDF version */
+    /* Margin and padding centers horizontally and adds vertical space with background color, border color and box shadowing */
+    .download-box {
+        max-width: 400px;
+        margin: 4rem auto;
+        padding: 2rem;
+        background-color: #e6f0e6;
+        border: 2px solid #1e3a8a;
+        border-radius: 12px;
+        box-shadow: 0 0 12px 2px #1e3a8a;
+        text-align: center;
+    }
+
+    /* Attaching a download box for better view and display */
+    .download-box .button-link {
+        display: inline-block;
+        background-color: #1e3a8a;
+        color: #fff;
+        padding: 0.7rem 1.8rem;
+        margin: 0.8rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 0 8px #3282cd;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    /* Hover effect on the download box */
+    .download-box .button-link:hover {
+        background-color: #3282cd;
+        color: #1e3a8a;
+        box-shadow: 0 0 12px #3282cd;
+    }
+
+    /* Form styling */
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    form button {
+        background: #1e3a8a;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background: #3b82f6;
+    }
+
+    footer {
+        text-align: center;
+        background: #e5e7eb;
+        padding: 1rem;
+        color: #1e3a8a;
+    }
+
+    /* Responsive Styles */
+    /* Media Query to make the website responsive to any kind of device, phones, tablets or PCs */
+    /* Media Query responsiveness falls between 768px and 480px */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav.active {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        .nav li a {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Dark Mode Styles */
+    .dark-mode body {
+        background-color: #1e1e2f;
+        color: #f1f1f1;
+    }
+
+    .dark-mode header {
+        background-color: #0a0a23;
+        color: #f1f1f1;
+    }
+
+    .dark-mode main {
+        background-color: #2a2a40;
+    }
+
+    .dark-mode a {
+        color: #90cdf4;
+    }
+
+    .dark-mode footer {
+        background-color: #111;
+        color: #ccc;
+    }
+
+    /* Dark mode social styles */
+    body.dark #social a {
+        color: #9b9bc2;
+    }
+
+    body.dark #social a:hover {
+        color: #66ccff;
+    }
+
+    .dark.mode footer {
+        background-color: #747491;
+        color: #ccc;
+    }
+
+    #themeToggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        background-color: #1e3a8a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+
+    #themeToggle:hover {
+        transform: scale(1.1);
+    }
+
+    /* Connect with me displays my social handles when clicked */
+    #social {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    #social a {
+        color: rgb(37, 0, 172);
+        text-decoration: none;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+
+    #social a:hover {
+        color: rgb(0, 140, 255);
+    }
