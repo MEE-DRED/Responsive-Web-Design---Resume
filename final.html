@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mildred Ewenrim Ebomah | Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* CSS styling without frameworks like Bootstraps */
+        /* Box styling to create a box xpace for the Header */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        /* Creative choice of colour, font and layout */
+        /* line-height for text spacing */
+        /* horizontal and verticcal padding to accomodate all kinds of screens */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        body.dark-mode {
+            --primary-color: #1a252f;
+            --secondary-color: #2980b9;
+            --text-color: #ecf0f1;
+            --light-bg: #2c3e50;
+            --white: #34495e;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        }
+
+        /* justified text aligned to the centre */
+        /* horizontal padding 2rem, vertical padding 1rem */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode header {
+            background: rgba(52, 73, 94, 0.95);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Image section should display my picture and a gradient coloured form of my initials */
+        .image-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-color);
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Profile info */
+
+        .profile-info h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-info p {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--secondary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Navigation */
+        /* Navigation styling */
+        nav {
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* List-style and vertical display display */
+        /* justified text to the centre and 2rem spaceing between each item */
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-list a:hover,
+        .nav-list a.active {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+        main {
+            margin-top: 150px;
+            padding: 2rem 0;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Dark Mode Style effect */
+        .dark-mode section {
+            background: rgba(52, 73, 94, 0.95);
+        }
+
+        /* Responsive Styles */
+        /* Media Query to make the website responsive to any kind of device, phones, tablets or PCs */
+        /* Media Query responsiveness falls between 768px and 480px */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /*responsive animation */
+
+        section:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        section:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        section:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        section:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        section:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        /* Skills Grid and category*/
+        /* Created a grid and category to section my skills, soft, hard, medical*/
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-category li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Experience Timeline */
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary-color);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            margin-left: 1rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        /* Projects Grid */
+        /*Also created a grid for projects and added link to view all */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+        }
+
+        /* This download button (btn) allows the user download CV in PDF version */
+        /* Margin and padding centers horizontally and adds vertical space with background color, border color and box shadowing */
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: var(--secondary-color);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        /* Hover effect on the download box */
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Social Links */
+        /* Connect with me displays my social handles when clicked */
+        .social-links {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        .dark-mode .modal-content {
+            background: var(--white);
+            color: var(--text-color);
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 2rem;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            main {
+                margin-top: 200px;
+            }
+
+            .content-container {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-timeline {
+                padding-left: 1rem;
+            }
+
+            .experience-item {
+                margin-left: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-info h1 {
+                font-size: 1.2rem;
+            }
+
+            .profile-info p {
+                font-size: 0.9rem;
+            }
+
+            .image-img {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            .social-links a {
+                margin: 0 0.5rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Success message styles */
+        .success-message {
+            background: #27ae60;
+            color: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .error-message {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Basic resume containing About, Interests, Skills, Experience, Education, Projects, Language and Contact info-->
+
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                <img src="image.jpg" alt="Image" class="image-img">
+                <div class="profile-info">
+                    <h1>Mildred Ewenrim Ebomah</h1>
+                    <p>Medical Radiographer | Future Health Tech Innovator</p>
+                </div>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span id="themeIcon">💊</span>
+            </button>
+        </div>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#interests" class="nav-link">Interests</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#languages" class="nav-link">Languages</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-container">
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Certified Medical Radiographer with over 3+ years of experience dedicated to delivering excellence in
+                    patient care. Seeking to use proven expertise in operating advanced radiographic equipment,
+                    conducting diagnostic imaging procedures, and prioritizing patient comfort. Committed to providing
+                    top-tier care, ensuring precise diagnoses, and fostering empathy and cultural awareness to create a
+                    supportive environment for patients and staff.</p>
+            </section>
+
+            <!-- Interests Section -->
+            <section id="interests">
+                <h2>Interests</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Medical Technology</h4>
+                        <ul>
+                            <li>Biomedical Software Engineering</li>
+                            <li>Radiology Equipment</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Specialized Imaging</h4>
+                        <ul>
+                            <li>Mammography</li>
+                            <li>Computed Tomography</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Research Areas</h4>
+                        <ul>
+                            <li>Forensic Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming & Development</h4>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>Python (Basic)</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Software</h4>
+                        <ul>
+                            <li>MS Office Suite</li>
+                            <li>VSCode</li>
+                            <li>Sketchbook Pro</li>
+                            <li>Canva, CapCut</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Creative Skills</h4>
+                        <ul>
+                            <li>Graphic Design</li>
+                            <li>Illustration</li>
+                            <li>Video Editing</li>
+                            <li>Research & Writing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Medical Imaging</h4>
+                        <ul>
+                            <li>Diagnostic X-ray</li>
+                            <li>Ultrasonography</li>
+                            <li>Mammography</li>
+                            <li>Computed Tomography</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <ul>
+                            <li>Effective Communication</li>
+                            <li>Teamwork</li>
+                            <li>Time Management</li>
+                            <li>Adaptability</li>
+                            <li>Conflict Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <h3>Senior Medical Radiographer</h3>
+                        <p><strong>Mater Misericordiae Hospital, Afikpo Ebonyi</strong> | May 2023 - August 2024</p>
+                        <ul>
+                            <li>Performed contrast studies, ultrasonography and electrocardiography, adhering to
+                                established protocols</li>
+                            <li>Collaborated effectively with multidisciplinary healthcare teams to ensure accurate
+                                diagnoses and optimal patient care</li>
+                            <li>Participated in continuous professional development activities to stay updated on
+                                emerging technologies and best practices in radiography</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Chief Intern Radiographer</h3>
+                        <p><strong>Alex Ekwueme Federal University Teaching Hospital, Ebonyi</strong> | Feb 2022 - Jan
+                            2023</p>
+                        <ul>
+                            <li>Served as Chief Intern and coordinated the activities of radiography interns in the
+                                hospital</li>
+                            <li>Assisted in performing diagnostic imaging procedures under the supervision of licensed
+                                radiographers</li>
+                            <li>Assisted in sonographic procedures and reporting sonographic findings</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Volunteer Radiographer</h3>
+                        <p><strong>Alex Ekwueme Federal University Teaching Hospital, Ebonyi</strong> | Sept 2021 - Feb
+                            2022</p>
+                        <ul>
+                            <li>Assisted in patient education, explaining procedures and ensuring their comfort and
+                                understanding</li>
+                            <li>Collaborated with healthcare professionals to deliver comprehensive care to patients in
+                                need</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <h3>Bachelor of Software Engineering (B.SE)</h3>
+                        <p><strong>African Leadership University (ALU), Kigali, Rwanda</strong> | In Progress</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Bachelor of Medical Radiography (B.MR)</h3>
+                        <p><strong>University of Nigeria Nsukka (UNN), Enugu State, Nigeria</strong> | 2021</p>
+                    </div>
+                </div>
+                <h3>Thesis Work</h3>
+                <ul>
+                    <li>Assessment of practice and methods of sterilization of hysterosalpingography equipment in
+                        selected radiology units in Enugu State</li>
+                    <li>Importance of Mammography in the Characterization of Breast Lesions</li>
+                </ul>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>2024 - Radiographic Health Pathologies</h4>
+                        <p>Analyzing reproductive radiographic health pathologies in both men and women at African
+                            Leadership University, ALU.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>2024 - Be Aware, Be Informed, Be Empowered</h4>
+                        <p>Breast cancer awareness initiative at African Leadership University, ALU.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>2024 - Ultrasonographic Assessment of the Scrotum</h4>
+                        <p>Assessment of the scrotum amongst young men of child bearing age.</p>
+                        <a href="https://www.notion.so/SEMINARS-1d76769e27ec80bea6d7c4115d22758e?pvs=4" target="_blank"
+                            class="project-link">View all health-related projects</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>2025 - Regex Data Extractor</h4>
+                        <p>Python tool to extract structured data (emails, hashtags, URLs) from unstructured text.</p>
+                        <a href="https://github.com/MEE-DRED/alu_regex-data-extraction-MEE-DRED" target="_blank"
+                            class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <h3>Interpretation of Medical Images (X-Rays, CTs, MRIs)</h3>
+                        <p><strong>April 2024</strong></p>
+                        <p>Interpretation of images with possible diagnosis</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Foreign Language Acquisition Certification</h3>
+                        <p><strong>March 2024</strong></p>
+                        <p>Proficiency Spanish Language Certification - Advanced Spanish language proficiency</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Post Graduate in Computed Tomography</h3>
+                        <p><strong>The Nigerian Institute of Radiographers | September 2022</strong></p>
+                        <p>Post graduate studies in computed tomography</p>
+                    </div>
+                </div>
+                <a href="https://www.notion.so/MILDRED-LICENSE-AND-CERTIFICATES-9febc9029fbf40658e734dda31e8a958?pvs=4"
+                    target="_blank" class="project-link">View all Certifications</a>
+            </section>
+
+            <!-- Languages Section -->
+            <section id="languages">
+                <h2>Languages</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Native</h4>
+                        <ul>
+                            <li>English</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Intermediate</h4>
+                        <ul>
+                            <li>Spanish</li>
+                            <li>Korean</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Beginner</h4>
+                        <ul>
+                            <li>French</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Section -->
+            <section class="download-section">
+                <h2>Download Resume</h2>
+                <p>Get a PDF copy of my complete Resume</p>
+                <a href="EBOMAH MILDRED EWENRIM__CV.main.pdf" class="download-btn" id="downloadBtn">Download Resume
+                    (PDF)</a>
+
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div class="success-message" id="successMessage">
+                        Thank you for your message! I'll get back to you soon.
+                    </div>
+                    <div class="error-message" id="errorMessage">
+                        Please fill in all required fields correctly.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Links Section -->
+            <section class="social-links">
+                <h2>Connect With Me</h2>
+                <p>
+                    <a href="https://www.instagram.com/mildred_ebomah" target="_blank"><i
+                            class="fab fa-instagram"></i></a> |
+                    <a href="https://www.linkedin.com/in/mildredebomah" target="_blank"><i
+                            class="fab fa-linkedin"></i></a> |
+                    <a href="https://medium.com/@dynwithmee" target="_blank"><i class="fab fa-medium"></i></a> |
+                    <a href="https://www.facebook.com/share/1XP12ZqjAj" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                </p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mildred Ewenrim Ebomah. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Theme Toggle Functionality
+        class ThemeManager {
+            constructor() {
+                this.themeToggle = document.getElementById('themeToggle');
+                this.themeIcon = document.getElementById('themeIcon');
+                this.body = document.body;
+                this.currentTheme = localStorage.getItem('theme') || 'light';
+
+                this.init();
+            }
+
+            init() {
+                // Set initial theme
+                this.setTheme(this.currentTheme);
+
+                // Add event listener
+                this.themeToggle.addEventListener('click', () => {
+                    this.toggleTheme();
+                });
+            }
+
+            setTheme(theme) {
+                if (theme === 'dark') {
+                    this.body.classList.add('dark-mode');
+                    this.themeIcon.textContent = '🩺';
+                } else {
+                    this.body.classList.remove('dark-mode');
+                    this.themeIcon.textContent = '💊';
+                }
+                this.currentTheme = theme;
+                localStorage.setItem('theme', theme);
+            }
+
+            toggleTheme() {
+                const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+                this.setTheme(newTheme);
+            }
+        }
+
+        // Navigation Manager
+        class NavigationManager {
+            constructor() {
+                this.menuToggle = document.getElementById('menuToggle');
+                this.navList = document.getElementById('navList');
+                this.navLinks = document.querySelectorAll('.nav-link');
+                this.sections = document.querySelectorAll('section[id]');
+
+                this.init();
+            }
+
+            init() {
+                // Mobile menu toggle
+                this.menuToggle.addEventListener('click', () => {
+                    this.navList.classList.toggle('active');
+                });
+
+                // Smooth scrolling for navigation links
+                this.navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+
+                        if (targetSection) {
+                            const headerHeight = document.querySelector('header').offsetHeight;
+                            const targetPosition = targetSection.offsetTop - headerHeight - 20;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+
+                        // Close mobile menu after clicking
+                        this.navList.classList.remove('active');
+                    });
+                });
+
+                // Update active nav link on scroll
+                window.addEventListener('scroll', () => {
+                    this.updateActiveNavLink();
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('nav') && this.navList.classList.contains('active')) {
+                        this.navList.classList.remove('active');
+                    }
+                });
+            }
+
+            updateActiveNavLink() {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const scrollPosition = window.scrollY + headerHeight + 100;
+
+                this.sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        this.navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+        }
+
+        // Form Manager
+        class FormManager {
+            constructor() {
+                this.contactForm = document.getElementById('contactForm');
+                this.successMessage = document.getElementById('successMessage');
+                this.errorMessage = document.getElementById('errorMessage');
+                this.successModal = document.getElementById('successModal');
+                this.closeModal = document.getElementById('closeModal');
+
+                this.init();
+            }
+
+            init() {
+                this.contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleFormSubmission();
+                });
+
+                this.closeModal.addEventListener('click', () => {
+                    this.successModal.style.display = 'none';
+                });
+
+                window.addEventListener('click', (e) => {
+                    if (e.target === this.successModal) {
+                        this.successModal.style.display = 'none';
+                    }
+                });
+
+                // Real-time form validation
+                const inputs = this.contactForm.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => {
+                        this.validateField(input);
+                    });
+
+                    input.addEventListener('input', () => {
+                        this.clearFieldError(input);
+                    });
+                });
+            }
+
+            validateField(field) {
+                const value = field.value.trim();
+                let isValid = true;
+                let errorMessage = '';
+
+                // Remove existing error styling
+                field.classList.remove('error');
+
+                // Required field validation
+                if (field.hasAttribute('required') && !value) {
+                    isValid = false;
+                    errorMessage = 'This field is required';
+                }
+
+                // Email validation
+                if (field.type === 'email' && value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid email address';
+                    }
+                }
+
+                // Name validation (no numbers)
+                if (field.name === 'name' && value) {
+                    const nameRegex = /^[a-zA-Z\s]+$/;
+                    if (!nameRegex.test(value)) {
+                        isValid = false;
+                        errorMessage = 'Name should only contain letters and spaces';
+                    }
+                }
+
+                if (!isValid) {
+                    this.showFieldError(field, errorMessage);
+                }
+
+                return isValid;
+            }
+
+            showFieldError(field, message) {
+                field.classList.add('error');
+
+                // Remove existing error message
+                const existingError = field.parentNode.querySelector('.field-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+
+                // Add new error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'field-error';
+                errorDiv.textContent = message;
+                errorDiv.style.color = '#e74c3c';
+                errorDiv.style.fontSize = '0.875rem';
+                errorDiv.style.marginTop = '0.25rem';
+
+                field.parentNode.appendChild(errorDiv);
+            }
+
+            clearFieldError(field) {
+                field.classList.remove('error');
+                const errorDiv = field.parentNode.querySelector('.field-error');
+                if (errorDiv) {
+                    errorDiv.remove();
+                }
+            }
+
+            handleFormSubmission() {
+                const formData = new FormData(this.contactForm);
+                const formObject = {};
+                let isFormValid = true;
+
+                // Validate all fields
+                const inputs = this.contactForm.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    if (!this.validateField(input)) {
+                        isFormValid = false;
+                    }
+                    formObject[input.name] = input.value.trim();
+                });
+
+                if (!isFormValid) {
+                    this.showErrorMessage('Please correct the errors above');
+                    return;
+                }
+
+                // Hide previous messages
+                this.hideMessages();
+
+                // Simulate form submission with loading state
+                const submitBtn = this.contactForm.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Reset button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+
+                    // Show success
+                    this.showSuccessModal();
+                    this.contactForm.reset();
+
+                    // Clear any remaining field errors
+                    inputs.forEach(input => {
+                        this.clearFieldError(input);
+                    });
+
+                    // Log form data (in real app, this would be sent to server)
+                    console.log('Form submitted:', formObject);
+                }, 1500);
+            }
+
+            showSuccessModal() {
+                this.successModal.style.display = 'block';
+            }
+
+            showErrorMessage(message) {
+                this.errorMessage.textContent = message;
+                this.errorMessage.style.display = 'block';
+                this.successMessage.style.display = 'none';
+
+                setTimeout(() => {
+                    this.hideMessages();
+                }, 5000);
+            }
+
+            hideMessages() {
+                this.successMessage.style.display = 'none';
+                this.errorMessage.style.display = 'none';
+            }
+        }
+
+        // Animation Manager
+        class AnimationManager {
+            constructor() {
+                this.sections = document.querySelectorAll('section');
+                this.init();
+            }
+
+            init() {
+                // Intersection Observer for scroll animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+
+                this.sections.forEach(section => {
+                    observer.observe(section);
+                });
+
+                // Add hover effects to interactive elements
+                this.addHoverEffects();
+            }
+
+            addHoverEffects() {
+                // Skill categories hover effect
+                const skillCategories = document.querySelectorAll('.skill-category');
+                skillCategories.forEach(category => {
+                    category.addEventListener('mouseenter', function () {
+                        this.style.transform = 'translateY(-5px) scale(1.02)';
+                    });
+
+                    category.addEventListener('mouseleave', function () {
+                        this.style.transform = 'translateY(0) scale(1)';
+                    });
+                });
+
+                // Project cards hover effect
+                const projectCards = document.querySelectorAll('.project-card');
+                projectCards.forEach(card => {
+                    card.addEventListener('mouseenter', function () {
+                        this.style.transform = 'translateY(-8px) scale(1.02)';
+                    });
+
+                    card.addEventListener('mouseleave', function () {
+                        this.style.transform = 'translateY(0) scale(1)';
+                    });
+                });
+            }
+        }
+
+        // Download Manager
+        class DownloadManager {
+            constructor() {
+                this.downloadBtn = document.getElementById('downloadBtn');
+                this.init();
+            }
+
+            init() {
+                this.downloadBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.handleDownload();
+                });
+            }
+
+            handleDownload() {
+                // In a real application, this would download the actual PDF
+                // For demo purposes, we'll show an alert
+                const originalText = this.downloadBtn.textContent;
+                this.downloadBtn.textContent = 'Preparing Download...';
+
+                setTimeout(() => {
+                    this.downloadBtn.textContent = originalText;
+                    alert('PDF download would start here. In a real application, this would download the actual resume PDF.');
+
+                    // Create a sample download link (you would replace this with actual PDF URL)
+                    // const link = document.createElement('a');
+                    // link.href = 'path/to/your/resume.pdf';
+                    // link.download = 'Mildred_Ebomah_Resume.pdf';
+                    // document.body.appendChild(link);
+                    // link.click();
+                    // document.body.removeChild(link);
+                }, 1000);
+            }
+        }
+
+        // Scroll to Top Functionality
+        class ScrollManager {
+            constructor() {
+                this.createScrollToTopButton();
+                this.init();
+            }
+
+            createScrollToTopButton() {
+                const scrollBtn = document.createElement('button');
+                scrollBtn.innerHTML = '↑';
+                scrollBtn.className = 'scroll-to-top';
+                scrollBtn.setAttribute('aria-label', 'Scroll to top');
+
+                // Add styles
+                Object.assign(scrollBtn.style, {
+                    position: 'fixed',
+                    bottom: '2rem',
+                    right: '2rem',
+                    width: '50px',
+                    height: '50px',
+                    borderRadius: '50%',
+                    border: 'none',
+                    background: 'linear-gradient(45deg, #3498db, #e74c3c)',
+                    color: 'white',
+                    fontSize: '1.2rem',
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    opacity: '0',
+                    visibility: 'hidden',
+                    transition: 'all 0.3s ease',
+                    zIndex: '1000',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                });
+
+                document.body.appendChild(scrollBtn);
+                this.scrollBtn = scrollBtn;
+            }
+
+            init() {
+                // Show/hide scroll button based on scroll position
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        this.scrollBtn.style.opacity = '1';
+                        this.scrollBtn.style.visibility = 'visible';
+                    } else {
+                        this.scrollBtn.style.opacity = '0';
+                        this.scrollBtn.style.visibility = 'hidden';
+                    }
+                });
+
+                // Scroll to top when clicked
+                this.scrollBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Add hover effect
+                this.scrollBtn.addEventListener('mouseenter', () => {
+                    this.scrollBtn.style.transform = 'scale(1.1)';
+                });
+
+                this.scrollBtn.addEventListener('mouseleave', () => {
+                    this.scrollBtn.style.transform = 'scale(1)';
+                });
+            }
+        }
+
+        // Performance Monitor
+        class PerformanceMonitor {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                // Monitor page load performance
+                window.addEventListener('load', () => {
+                    const loadTime = performance.now();
+                    console.log(`Page loaded in ${Math.round(loadTime)}ms`);
+
+                    // Lazy load non-critical elements
+                    this.lazyLoadElements();
+                });
+            }
+
+            lazyLoadElements() {
+                // Lazy load social media icons and other non-critical elements
+                const socialLinks = document.querySelectorAll('.social-links a');
+                socialLinks.forEach(link => {
+                    link.style.opacity = '0';
+                    link.style.transform = 'translateY(20px)';
+
+                    setTimeout(() => {
+                        link.style.transition = 'all 0.5s ease';
+                        link.style.opacity = '1';
+                        link.style.transform = 'translateY(0)';
+                    }, Math.random() * 1000 + 500);
+                });
+            }
+        }
+
+        // Accessibility Manager
+        class AccessibilityManager {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                // Add keyboard navigation support
+                this.addKeyboardNavigation();
+
+                // Add focus indicators
+                this.addFocusIndicators();
+
+                // Add screen reader support
+                this.addScreenReaderSupport();
+            }
+
+            addKeyboardNavigation() {
+                // Allow keyboard navigation through sections
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Tab') {
+                        // Enhanced tab navigation is handled by browser
+                        return;
+                    }
+
+                    // Add custom keyboard shortcuts
+                    if (e.ctrlKey || e.metaKey) {
+                        switch (e.key) {
+                            case '1':
+                                e.preventDefault();
+                                document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                                break;
+                            case '2':
+                                e.preventDefault();
+                                document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+                                break;
+                            case '3':
+                                e.preventDefault();
+                                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                                break;
+                        }
+                    }
+                });
+            }
+
+            addFocusIndicators() {
+                // Add visible focus indicators for keyboard users
+                const focusableElements = document.querySelectorAll(
+                    'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                );
+
+                focusableElements.forEach(element => {
+                    element.addEventListener('focus', function () {
+                        this.style.outline = '2px solid #3498db';
+                        this.style.outlineOffset = '2px';
+                    });
+
+                    element.addEventListener('blur', function () {
+                        this.style.outline = '';
+                        this.style.outlineOffset = '';
+                    });
+                });
+            }
+
+            addScreenReaderSupport() {
+                // Add ARIA labels and descriptions where needed
+                const sections = document.querySelectorAll('section[id]');
+                sections.forEach((section, index) => {
+                    if (!section.getAttribute('aria-label')) {
+                        const heading = section.querySelector('h2');
+                        if (heading) {
+                            section.setAttribute('aria-labelledby', heading.id || `section-${index}`);
+                            if (!heading.id) {
+                                heading.id = `section-${index}`;
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize all managers when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 Initializing Mildred Ebomah Resume Website...');
+
+            // Initialize all components
+            new ThemeManager();
+            new NavigationManager();
+            new FormManager();
+            new AnimationManager();
+            new DownloadManager();
+            new ScrollManager();
+            new PerformanceMonitor();
+            new AccessibilityManager();
+
+            console.log('All components initialized successfully!');
+
+            // Add loading complete class
+            document.body.classList.add('loaded');
+        });
+
+        // Add error handling for uncaught errors
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript Error:', e.error);
+        });
+
+        // Add styles for error states and additional interactive elements
+        const additionalStyles = `
+            <style>
+                .error {
+                    border-color: #e74c3c !important;
+                    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+                }
+                
+                .field-error {
+                    color: #e74c3c;
+                    font-size: 0.875rem;
+                    margin-top: 0.25rem;
+                }
+                
+                .loaded {
+                    animation: fadeIn 0.5s ease-in;
+                }
+                
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                
+                .scroll-to-top:hover {
+                    transform: scale(1.1) !important;
+                }
+                
+                /* Enhanced focus styles */
+                *:focus {
+                    outline: 2px solid #3498db !important;
+                    outline-offset: 2px !important;
+                }
+                
+                /* Loading animation for submit button */
+                .submit-btn:disabled {
+                    opacity: 0.7;
+                    cursor: not-allowed;
+                }
+                
+                /* Smooth transitions for all interactive elements */
+                .skill-category,
+                .project-card,
+                .experience-item,
+                .nav-list a,
+                .submit-btn,
+                .download-btn {
+                    transition: all 0.3s ease !important;
+                }
+            </style>
+        `;
+
+        document.head.insertAdjacentHTML('beforeend', additionalStyles);
+    </script>
+</body>
+
+</html>
